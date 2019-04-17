@@ -1,0 +1,14 @@
+{
+  "name": "pictureify",
+  "version": "1.0.0",
+  "description": "Convert image to music list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/vision": "^0.25.0"
+  }
+}
