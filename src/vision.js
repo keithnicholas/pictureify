@@ -1,4 +1,4 @@
-async function quickstart() {
+var visionProcess =  async function quickstart(path) {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
   
@@ -6,9 +6,10 @@ async function quickstart() {
     const client = new vision.ImageAnnotatorClient();
   
     // Performs label detection on the image file
-    const [result] = await client.labelDetection('./resources/test.png');
-    const labels = result.labelAnnotations;
+    const [result] =  await client.labelDetection(path);
+    const labels = await result.labelAnnotations;
     console.log('Labels:');
     labels.forEach(label => console.log(label.description));
   }
-  quickstart()
+ 
+module.exports.wordify = visionProcess
