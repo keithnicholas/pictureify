@@ -1,7 +1,7 @@
-var visionProcess =  async function quickstart(path) {
+async function quickstart(path) {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
-  
+    var labelList = []
     // Creates a client
     const client = new vision.ImageAnnotatorClient();
   
@@ -9,7 +9,11 @@ var visionProcess =  async function quickstart(path) {
     const [result] =  await client.labelDetection(path);
     const labels = await result.labelAnnotations;
     console.log('Labels:');
-    labels.forEach(label => console.log(label.description));
+    labels.forEach((label) =>{
+      console.log(label.description)
+      labelList.push(label.description)
+    });
+    return labelList
   }
  
-module.exports.wordify = visionProcess
+module.exports.wordify = quickstart

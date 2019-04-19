@@ -1,0 +1,12 @@
+html, body{
+    background-color: #03121b;
+    height: 100vh;
+}
+
+div .input-group {
+    text-align: left !important;
+    background-color: #ffa;
+}
+#inputgroup-form{
+    background-color:#03121b;
+}

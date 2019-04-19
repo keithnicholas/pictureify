@@ -11,33 +11,47 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Hello, world!</title>
-    <style>
-        div .input-group{
-            text-align:left !important;
-        background-color:#ffa;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="resources/styles/server.css">
     <script></script>
 </head>
 
-<body class="bg-white">
+<body>
     <!-- {property}{sides}-{breakpoint}-{size} -->
-<div class="container">
-        <form  action="/upload" enctype="multipart/form-data" method="POST">  
-            <div class="input-group">
-               
-                    <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                    </div>
-                    <div class="custom-file">
-                    <input type="file" name="img-upload" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>  
+    <div class="container">
+
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+                    <h1 class="display-7 text-center">Pictureify</h1>
+
+                    <p class="lead">Convert pictures into song playlist</p>
             </div>
 
-        </form>
-</div>
+        </div>
+        <div class="row-lg-4">
+                <form class="align-self-center" action="/upload" enctype="multipart/form-data" method="POST">
+                    <div class="input-group" id="inputgroup-form">
+        
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" name="img-upload" class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                        <button type="submit" class="btn btn-success ml-3">Submit</button>
+                    </div>
+        
+                </form>
+        </div>
+        <footer class="d-flex justify-content-center mt-auto "> <div class="footer-copyright text-center py-3 text-white">My Website:
+                <a href="https://mdbootstrap.com/education/bootstrap/">keithnicholas.com</a>
+              </div> 
+            
+            </footer>
+
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
